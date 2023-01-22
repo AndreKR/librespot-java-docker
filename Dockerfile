@@ -18,7 +18,7 @@ RUN apk -U add \
     openjdk17-jre \
     alsa-utils
 
-COPY --from=builder /root/librespot*/player/target/librespot-player-*.jar /app/player.jar
+COPY --from=builder /root/librespot*/api/target/librespot-api-*.jar /app/player.jar
 COPY config.toml /config/
 
 VOLUME /config
